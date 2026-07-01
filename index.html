@@ -86,7 +86,7 @@
 
         h1 {
             font-size: 2.6rem;
-            background: linear-gradient(to right, #ff9aa2, #b5ead7, #c7ceea);
+            background: linear-gradient(to right, #ff9aa2, #b19ffb, #8bc3eb);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             font-weight: 600;
@@ -98,8 +98,50 @@
             padding-bottom: 6px;
             display: inline-block;
             font-weight: 600;
+            margin-bottom: 20px;
         }
 
+        /* ตกแต่งส่วนรูปภาพ */
+        .profile-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .profile-img {
+            max-width: 100%;
+            width: 280px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            border: 5px solid rgba(255, 255, 255, 0.8);
+        }
+
+        /* ตกแต่งตารางประวัติการศึกษา */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 14px 20px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e2dbff;
+            color: #4a4a4a;
+            font-weight: 600;
+        }
+
+        td {
+            border-bottom: 1px solid rgba(226, 219, 255, 0.5);
+        }
+
+        /* จัดแต่งรายการ Skills และ Projects */
         ul {
             list-style: none;
             padding: 0;
@@ -129,9 +171,23 @@
             color: #9aa5e7;
         }
 
+        .project-subtitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 20px;
+            color: #555;
+            display: flex;
+            align-items: center;
+        }
+
+        .project-subtitle i {
+            margin-right: 8px;
+        }
+
+        /* ตกแต่งปุ่ม Contact โซเชียลมีเดีย */
         .contact-info {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 15px;
             margin-bottom: 30px;
         }
@@ -158,64 +214,10 @@
         .btn-phone { background-color: #8cd6a7; }
         .btn-phone:hover { background-color: #79c595; transform: translateY(-2px); }
 
-        .btn-instagram { background-color: #ff90b3; }
-        .btn-instagram:hover { background-color: #eb7da0; transform: translateY(-2px); }
-
         .btn-email { background-color: #8bc3eb; }
         .btn-email:hover { background-color: #79b2da; transform: translateY(-2px); }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            margin-top: 25px;
-        }
-
-        label {
-            font-weight: 600;
-            margin-bottom: 6px;
-            color: #666;
-            font-size: 0.9rem;
-        }
-
-        input, textarea {
-            padding: 14px;
-            border: 1px solid #e2e8f0;
-            border-radius: 12px;
-            margin-bottom: 20px;
-            font-family: 'Kanit', sans-serif;
-            font-size: 0.95rem;
-            outline: none;
-            background: rgba(255, 255, 255, 0.8);
-            transition: all 0.3s ease;
-        }
-
-        input:focus, textarea:focus {
-            border-color: #c7ceea;
-            background: #fff;
-            box-shadow: 0 0 12px rgba(199, 206, 234, 0.5);
-        }
-
-        button[type="submit"] {
-            background: linear-gradient(135deg, #b19ffb, #ff9aa2);
-            color: white;
-            border: none;
-            padding: 14px 28px;
-            font-size: 1rem;
-            font-family: 'Kanit', sans-serif;
-            font-weight: 600;
-            border-radius: 12px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            align-self: flex-start;
-            box-shadow: 0 4px 15px rgba(177, 159, 251, 0.3);
-        }
-
-        button[type="submit"]:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(177, 159, 251, 0.5);
-            opacity: 0.95;
-        }
-
+        /* ส่วนท้ายเว็บ (Footer) */
         footer {
             text-align: center;
             padding: 40px 0;
@@ -229,82 +231,78 @@
 
     <header>
         <nav>
-            <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
-            <a href="#about"><i class="fa-solid fa-user"></i> About</a>
-            <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
-            <a href="#projects"><i class="fa-solid fa-briefcase"></i> Projects</a>
-            <a href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a>
+            <a href="#home"><i class="fa-solid fa-house"></i> หน้าแรก</a>
+            <a href="#about"><i class="fa-solid fa-user"></i> ข้อมูลส่วนตัว</a>
+            <a href="#education"><i class="fa-solid fa-graduation-cap"></i> การศึกษา</a>
+            <a href="#skills"><i class="fa-solid fa-code"></i> ทักษะ</a>
+            <a href="#projects"><i class="fa-solid fa-briefcase"></i> ผลงาน</a>
+            <a href="#contact"><i class="fa-solid fa-address-book"></i> ติดต่อ</a>
         </nav>
     </header>
 
     <main>
         <section id="home">
-            <h1>My Portfolio</h1>
-            <p style="font-size: 1.1rem; color: #666;">ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของฉัน</p>
+            <h1>🎓 ประวัติส่วนตัว</h1>
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 0;">ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของฉัน</p>
         </section>
 
         <section id="about">
-            <h2>About Me</h2>
-            <article style="margin-top: 15px;">
-                <p><strong>ชื่อ :</strong> พิพัฒนพงค์ ทนุการ</p>
-                <p><strong>การศึกษา :</strong> กำลังศึกษาสาขาเทคโนโลยีสารสนเทศ (IT)</p>
+            <h2>👩‍🎓 ข้อมูลส่วนตัว (About Me)</h2>
+            
+            <div class="profile-container">
+                <img class="profile-img" alt="รูปนักศึกษา" src="https://github.com/user-attachments/assets/04b543be-874e-4098-bf5b-bdb0ea3cce51" />
+            </div>
+
+            <article style="margin-top: 25px;">
+                <p>✨ <strong>ชื่อ-นามสกุล :</strong> นาย พิพัฒนพงค์ ทนุการ</p>
+                <p>🏫 <strong>สาขา :</strong> เทคโนโลยีสารสนเทศ</p>
+                <p>💻 <strong>ความสนใจ :</strong> Web Development, UI/UX Design</p>
+                <p>📚 <strong>รายวิชาที่ชอบ :</strong> การพัฒนาเว็บไซต์</p>
+                
+                <blockquote style="margin: 20px 0 0 0; padding-left: 15px; border-left: 4px solid #b19ffb; font-style: italic; color: #666;">
+                    🚀 มุ่งมั่นพัฒนาทักษะด้านเทคโนโลยีและการเขียนโปรแกรม
+                </blockquote>
             </article>
         </section>
 
+        <section id="education">
+            <h2>📖 ประวัติการศึกษา</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ระดับการศึกษา</th>
+                        <th>สถานศึกษา</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>ปวช. [3]</td>
+                        <td>วิทยาลัยโปลิเทคนิคลานนา</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
         <section id="skills">
-            <h2>Skills</h2>
+            <h2>🛠️ ทักษะ (Skills)</h2>
             <ul>
                 <li><i class="fa-brands fa-html5" style="color: #ff9aa2;"></i> HTML</li>
-                <li><i class="fa-brands fa-css3-alt" style="color: #b5ead7;"></i> CSS</li>
-                <li><i class="fa-brands fa-python" style="color: #ffdac1;"></i> Python</li>
-                <li><i class="fa-brands fa-js" style="color: #e2f0cb;"></i> JavaScript</li>
+                <li><i class="fa-brands fa-css3-alt" style="color: #8bc3eb;"></i> CSS</li>
+                <li><i class="fa-brands fa-js" style="color: #ffd166;"></i> JavaScript</li>
+                <li><i class="fa-brands fa-php" style="color: #a29bfe;"></i> PHP</li>
+                <li><i class="fa-solid fa-database" style="color: #ffb7b2;"></i> MySQL</li>
+                <li><i class="fa-brands fa-github" style="color: #4a4a4a;"></i> Git & GitHub</li>
             </ul>
         </section>
 
         <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><i class="fa-solid fa-desktop" style="color: #c7ceea;"></i> Portfolio Website</li>
-                <li><i class="fa-solid fa-terminal" style="color: #ffb7b2;"></i> Python Program</li>
-                <li><i class="fa-solid fa-cubes" style="color: #e2f0cb;"></i> Web Application</li>
-            </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
+            <h2>📂 ผลงาน (Portfolio)</h2>
             
-            <div class="contact-info" style="margin-top: 20px;">
-                <a href="tel:0822215375" class="btn-contact btn-phone">
-                    <i class="fa-solid fa-phone"></i> 082-221-5375
-                </a>
-                <a href="https://instagram.com/pxnd_zx07" target="_blank" class="btn-contact btn-instagram">
-                    <i class="fa-brands fa-instagram"></i> pxnd_zx07
-                </a>
-                <a href="mailto:gbskyyks@email.com" class="btn-contact btn-email">
-                    <i class="fa-solid fa-envelope"></i> ส่งอีเมล
-                </a>
-            </div>
+            <div class="project-subtitle"><i class="fa-solid fa-earth-americas" style="color: #8bc3eb;"></i> 🌐 เว็บไซต์</div>
+            <ul>
+                <li><i class="fa-solid fa-users-gear" style="color: #b5ead7;"></i> ระบบจัดการข้อมูลนักศึกษา</li>
+                <li><i class="fa-solid fa-cart-shopping" style="color: #ff9aa2;"></i> เว็บไซต์ร้านค้าออนไลน์</li>
+                <li><i class="fa-solid fa-calendar-check" style="color: #c7ceea;"></i> ระบบจองห้องประชุม</li>
+            </ul>
 
-            <h3>Contact Form</h3>
-
-            <form action="#" method="POST">
-                <label for="name">ชื่อ:</label>
-                <input type="text" id="name" name="name" placeholder="กรอกชื่อของคุณ" required>
-
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="example@email.com" required>
-
-                <label for="message">ข้อความ:</label>
-                <textarea id="message" name="message" rows="5" placeholder="พิมพ์ข้อความที่ต้องการส่ง..." required></textarea>
-
-                <button type="submit">Send Message</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2026 My Portfolio. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
+            <div class="project-subtitle"><i class="fa-solid fa-mobile-screen-button" style="color: #ff90b3;"></i> 📱
