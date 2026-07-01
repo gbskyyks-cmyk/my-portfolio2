@@ -10,12 +10,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
-        /* --- 1. ตกแต่งพื้นหลังสีรุ้งพาสเทล ละมุน สบายตา (Soft Pastel Rainbow Background) --- */
         body {
             font-family: 'Kanit', sans-serif;
             margin: 0;
             padding: 0;
-            /* ใช้โทนสีอ่อนหวานสบายตา */
             background: linear-gradient(135deg, #fff5f5, #fef0f9, #f7f3ff, #edf4ff, #e8fbf8, #f4fdf0);
             background-size: 600% 600%;
             animation: gradientAnimation 20s ease infinite;
@@ -29,7 +27,6 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* --- 2. แถบเมนูบาร์ด้านบนแบบกระจกฝ้ามินิมอล --- */
         header {
             position: fixed;
             top: 0;
@@ -57,4 +54,257 @@
         }
 
         nav a:hover {
-            color: #b1
+            color: #b19ffb;
+        }
+
+        main {
+            max-width: 680px;
+            margin: 120px auto 40px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 35px;
+            box-shadow: 0 10px 30px rgba(150, 150, 150, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            transition: transform 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-2px);
+        }
+
+        h1, h2, h3 {
+            color: #3d3d3d;
+            margin-top: 0;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            background: linear-gradient(to right, #ff9aa2, #b5ead7, #c7ceea);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 600;
+        }
+
+        h2 {
+            font-size: 1.6rem;
+            border-bottom: 3px solid #e2dbff;
+            padding-bottom: 6px;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 12px 0;
+            padding: 15px 22px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.01);
+            display: flex;
+            align-items: center;
+            font-weight: 400;
+            border-left: 4px solid #c7ceea;
+            transition: all 0.2s ease;
+        }
+
+        ul li:hover {
+            transform: translateX(6px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        ul li i {
+            margin-right: 15px;
+            font-size: 1.4rem;
+            color: #9aa5e7;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .btn-contact {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 15px;
+            border-radius: 14px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 400;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-contact i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .btn-phone { background-color: #8cd6a7; }
+        .btn-phone:hover { background-color: #79c595; transform: translateY(-2px); }
+
+        .btn-instagram { background-color: #ff90b3; }
+        .btn-instagram:hover { background-color: #eb7da0; transform: translateY(-2px); }
+
+        .btn-email { background-color: #8bc3eb; }
+        .btn-email:hover { background-color: #79b2da; transform: translateY(-2px); }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        input, textarea {
+            padding: 14px;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-family: 'Kanit', sans-serif;
+            font-size: 0.95rem;
+            outline: none;
+            background: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #c7ceea;
+            background: #fff;
+            box-shadow: 0 0 12px rgba(199, 206, 234, 0.5);
+        }
+
+        button[type="submit"] {
+            background: linear-gradient(135deg, #b19ffb, #ff9aa2);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1rem;
+            font-family: 'Kanit', sans-serif;
+            font-weight: 600;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            align-self: flex-start;
+            box-shadow: 0 4px 15px rgba(177, 159, 251, 0.3);
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(177, 159, 251, 0.5);
+            opacity: 0.95;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #888;
+            font-weight: 300;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#about"><i class="fa-solid fa-user"></i> About</a>
+            <a href="#skills"><i class="fa-solid fa-code"></i> Skills</a>
+            <a href="#projects"><i class="fa-solid fa-briefcase"></i> Projects</a>
+            <a href="#contact"><i class="fa-solid fa-address-book"></i> Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>My Portfolio</h1>
+            <p style="font-size: 1.1rem; color: #666;">ยินดีต้อนรับสู่เว็บไซต์ Portfolio ของฉัน</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <article style="margin-top: 15px;">
+                <p><strong>ชื่อ :</strong> พิพัฒนพงค์ ทนุการ</p>
+                <p><strong>การศึกษา :</strong> กำลังศึกษาสาขาเทคโนโลยีสารสนเทศ (IT)</p>
+            </article>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li><i class="fa-brands fa-html5" style="color: #ff9aa2;"></i> HTML</li>
+                <li><i class="fa-brands fa-css3-alt" style="color: #b5ead7;"></i> CSS</li>
+                <li><i class="fa-brands fa-python" style="color: #ffdac1;"></i> Python</li>
+                <li><i class="fa-brands fa-js" style="color: #e2f0cb;"></i> JavaScript</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><i class="fa-solid fa-desktop" style="color: #c7ceea;"></i> Portfolio Website</li>
+                <li><i class="fa-solid fa-terminal" style="color: #ffb7b2;"></i> Python Program</li>
+                <li><i class="fa-solid fa-cubes" style="color: #e2f0cb;"></i> Web Application</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            
+            <div class="contact-info" style="margin-top: 20px;">
+                <a href="tel:0822215375" class="btn-contact btn-phone">
+                    <i class="fa-solid fa-phone"></i> 082-221-5375
+                </a>
+                <a href="https://instagram.com/pxnd_zx07" target="_blank" class="btn-contact btn-instagram">
+                    <i class="fa-brands fa-instagram"></i> pxnd_zx07
+                </a>
+                <a href="mailto:gbskyyks@email.com" class="btn-contact btn-email">
+                    <i class="fa-solid fa-envelope"></i> ส่งอีเมล
+                </a>
+            </div>
+
+            <h3>Contact Form</h3>
+
+            <form action="#" method="POST">
+                <label for="name">ชื่อ:</label>
+                <input type="text" id="name" name="name" placeholder="กรอกชื่อของคุณ" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <label for="message">ข้อความ:</label>
+                <textarea id="message" name="message" rows="5" placeholder="พิมพ์ข้อความที่ต้องการส่ง..." required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
